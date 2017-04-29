@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/CSC/real-p-auction/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="28f81b24a3b0bcaea80c99f19c54a5a47b03a033">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6790f706841c827f042f7a185ce9de57390634d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/CSC/real-p-auction/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0690df386d19c49c0b95f40181c074c38e6de21b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="88a2a06d2b9e5b8b89680f389da772b005107c92">
+        <dex dex="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_77b0120351c20088026f37e682449bab0dc6470e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6faee006eb09ffb48c2b278de54166d45c1e1ab0/classes.dex" />
+    </item>
+
+</items>
