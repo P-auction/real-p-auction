@@ -16,11 +16,15 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    String id_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent getIt = getIntent();
+        id_text = getIt.getExtras().getString("id");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -108,6 +112,7 @@ public class MainActivity extends AppCompatActivity
             return true;
         } else if (id == R.id.nav_my_page) {
             Intent intent = new Intent(MainActivity.this, MyPage.class);
+            intent.putExtra("id",id_text);
             startActivity(intent);
             return true;
         } else if (id == R.id.nav_logout) {

@@ -43,6 +43,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.csc.helloworld2.MainActivity" />
         </activity>
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>

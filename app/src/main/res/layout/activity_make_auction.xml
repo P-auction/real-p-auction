@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,67 +11,166 @@
     tools:context="com.example.csc.helloworld2.MakeAuctionActivity">
 
     <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
 
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/email_login_form"
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/auction_name_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:id="@+id/picture_choose_btn"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginTop = "50sp"
+            android:src="@drawable/ic_menu_camera"/>
+
+        <TextView
+            android:id="@+id/time_limit_VT"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="마감 시간"
+            android:textSize="25sp"
+            android:layout_alignBaseline="@+id/time_limit_ET"
+            android:layout_alignBottom="@+id/time_limit_ET"
+            android:layout_toStartOf="@+id/time_limit_ET"
+            android:layout_toLeftOf="@+id/time_limit_ET" />
+
+        <TextView
+            android:id="@+id/max_price_VT"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="최대 가격"
+            android:textSize="25sp"
+            android:layout_alignBottom="@+id/max_price_ET"
+            android:layout_toLeftOf="@+id/max_price_ET"
+            android:layout_toStartOf="@+id/max_price_ET" />
+
+        <EditText
+            android:id="@+id/time_limit_ET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_column="1"
+            android:layout_row="3"
+            android:hint="ex) 2017-01-01"
+            android:inputType="date"
+            android:layout_below="@+id/max_price_ET"
+            android:layout_alignLeft="@+id/max_price_ET"
+            android:layout_alignStart="@+id/max_price_ET"
+            android:layout_marginTop="53dp" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/max_price_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="50dp"
+            android:layout_row="2"
+            android:hint="ex) 5000"
+            android:inputType="number"
+            android:layout_below="@+id/least_price_VT"
+            android:layout_toRightOf="@+id/least_price_VT"
+            android:layout_toEndOf="@+id/least_price_VT"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+        <TextView
+            android:id="@+id/least_price_VT"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/least_price_ET"
+            android:layout_alignBottom="@+id/least_price_ET"
+            android:layout_alignEnd="@+id/picture_choose_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/picture_choose_btn"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="최소 가격"
+            android:textSize="25sp" />
 
-            </android.support.design.widget.TextInputLayout>
+        <EditText
+            android:id="@+id/least_price_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/picture_choose_btn"
+            android:layout_column="1"
+            android:layout_marginTop="49dp"
+            android:layout_row="1"
+            android:hint="ex) 1000"
+            android:inputType="number"
+            android:layout_alignLeft="@+id/max_price_ET"
+            android:layout_alignStart="@+id/max_price_ET" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+    </RelativeLayout>
 
-            </android.support.design.widget.TextInputLayout>
+    <EditText
+        android:id="@+id/description_ET"
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/auction_name_ET"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="물건 설명"
+        android:inputType="textMultiLine" />
 
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="등록하기"
+        android:textSize = "20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description_ET"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginTop="54dp"
+        android:layout_toLeftOf="@+id/description_ET"
+        android:layout_toStartOf="@+id/description_ET"
+        android:id="@+id/space" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/space"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/space"
+        android:layout_toRightOf="@+id/space" />
+
+</RelativeLayout>

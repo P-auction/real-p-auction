@@ -2,22 +2,130 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/CSC/real-p-auction/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/48b024512d73e19a56fcd6599fb7cd1f4a8c64de/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="28f81b24a3b0bcaea80c99f19c54a5a47b03a033">
-        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_6790f706841c827f042f7a185ce9de57390634d9/classes.dex" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_711b0c41e640f83508ee63c69c043b3b0d107f9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/dbcf47378bbef260d3b00c268dc065a1dae42c28/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_6cbffc307398cc36425682f205516384d5e819a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/5a8df8818e5a6f7460f8f790c0f982a0393d7d46/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_8cb6aaa55ec743096a30cb365675ecc9476123a7.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/CSC/real-p-auction/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.3"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0690df386d19c49c0b95f40181c074c38e6de21b/classes.dex" />
+        <dex dex="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6faee006eb09ffb48c2b278de54166d45c1e1ab0/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/bdd2058c013ec0b3d37dbbbd46dd8764c1cf915b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_40d3d27f11018d71bfe3f9a9265f9ef15069ba7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/f8338867db814c4b392f5394676e42f39ef5aa42/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_43553d6b4094466926e623cf45f25c3c574d0d70.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/b58296aa40a3b78dedc82d219c4e41fa55343f70/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_0aed0dc080cf33c9a008113f61a28c2fa37fc043.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/69ce2ef560cd8438498602f31c1bd94a4035ad5f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_4354f9d970b11e8bd61e565f2e873f6a41cb1ef7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/f86178a2cf8aaec5a98e4f8947a8d02e59edc53f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_a4d14677aac62b7edfa0cc62194978e3cb622454.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/fda5ccd4a7a52ccd9687673342697f4a6817e8c9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_0f29e17f74a41b183c54e7cc008705a610872cff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/9dd56a657e428bc3454769f7533cf85a140c4ce6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_654345967acff65d5b329b64639ee6ba96b57b37.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/8cc04d950e40af905c39aabf1e9496d6f5ca614d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_1cf8583add14f2e17df43a64cd486ca16785093b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_9f36832edb9eeec841ce7f91d3cce5b03d42985a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_040ec050502366576aeab88a363a0ff1b66e41bf.jar" />
     </item>
     <item
         is-multidex="true"
@@ -29,13 +137,22 @@
         <dex dex="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_77b0120351c20088026f37e682449bab0dc6470e/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/8706562f697c83ea7f8af261cd71917e8b2e8761/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.3"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/Users/CSC/AndroidStudioProjects/HelloWorld2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_6faee006eb09ffb48c2b278de54166d45c1e1ab0/classes.dex" />
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_88670138b2d1450bb1a89f6ec0770a590f6de3f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/CSC/.android/build-cache/c96f43c973b031f31ef87200bc22105d8a77870b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/CSC/real-p-auction/app/build/intermediates/pre-dexed/debug/classes_5dc25e4d405a5aad48fcf8676a8b40d3cc14822c.jar" />
     </item>
 
 </items>

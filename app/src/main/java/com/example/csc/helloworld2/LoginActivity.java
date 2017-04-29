@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button); //sign in button click
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,7 +93,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        Button mEmailSignUpButton = (Button)findViewById(R.id.email_sign_up_button); //sign up button click
+        mEmailSignUpButton.setOnClickListener(new OnClickListener(){
+            public void onClick(View v){
+                Intent it = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(it);
+                finish();
+            }
+        });
     }
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
@@ -335,6 +345,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             if (success) {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("id",mEmailView.getText().toString());
                 startActivityForResult(intent, 1);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
