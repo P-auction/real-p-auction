@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.csc.helloworld2.ShowAuctionActivity">
+
+
+    <TextView
+        android:id="@+id/showAuction_name_TV"
+        android:layout_width="219dp"
+        android:layout_height="30dp"
+        android:text=""
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <Button
+        android:id="@+id/betting_button"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="베팅"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="235dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:numStars="1"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/showAuction_image"
+        android:layout_width="131dp"
+        android:layout_height="116dp"
+        app:srcCompat="@drawable/ic_menu_camera"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="78dp"
+        android:textAlignment="center"
+        android:layout_height="27dp"
+        android:textSize = "17dp"
+        android:text="최신 경매가"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/showAuction_newestPrice_TV"
+        android:layout_width="117dp"
+        android:layout_height="26dp"
+        android:text=""
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+        android:text="경매 종료가"
+        android:textSize = "17dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/showAuction_stopDate_TV"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:text=""
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="80dp"
+        android:layout_height="28dp"
+        android:text="남은 시간"
+        android:textSize = "17dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteY="176dp"
+        tools:layout_editor_absoluteX="166dp" />
+
+    <TextView
+        android:id="@+id/showAuction_stopPrice_TV"
+        android:layout_width="117dp"
+        android:layout_height="28dp"
+        android:text=""
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="91dp"
+        android:layout_height="34dp"
+        android:text="설명"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="16dp"
+        android:textSize = "25dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <TextView
+        android:id="@+id/showAuction_description_VT"
+        android:layout_width="195dp"
+        android:layout_height="87dp"
+        android:text=""
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <TextView
+        android:id="@+id/showAuction_sellerInfo"
+        android:layout_width="159dp"
+        android:layout_height="89dp"
+        android:text=""
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="94dp"
+        android:layout_height="34dp"
+        android:text="판매자 정보"
+        android:textAlignment="center"
+        android:textSize = "20dp"
+        tools:layout_editor_absoluteY="235dp"
+        tools:layout_editor_absoluteX="211dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="111dp"
+        android:layout_height="25dp"
+        android:text="베팅 로그"
+        android:textSize = "22dp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="104dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="396dp">
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
