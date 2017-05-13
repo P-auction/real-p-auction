@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    tools:context="com.example.csc.helloworld2.List_item">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:text="가격(최신)"
+        android:textSize = "23dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        android:layout_alignTop="@+id/itemRecentPrice_TV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/itemName_TV"
+        android:layout_width="283dp"
+        android:layout_height="33dp"
+        android:text="nameDisplay"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginEnd="9dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="58dp"
+        android:layout_height="31dp"
+        android:text="제목 :"
+        android:textSize = "20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+        android:id="@+id/itemRecentPrice_TV"
+        android:layout_width="174dp"
+        android:layout_height="34dp"
+        android:text="recent"
+        android:textSize="25dp"
+        android:textDirection = "rtl"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="52dp"
+        android:layout_below="@+id/itemName_TV"
+        android:layout_alignLeft="@+id/itemStopPrice_TV"
+        android:layout_alignStart="@+id/itemStopPrice_TV"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+        android:text="가격(종료)"
+        android:textSize = "23dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="103dp"
+        android:layout_alignTop="@+id/itemStopPrice_TV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/itemStopPrice_TV"
+        android:layout_width="174dp"
+        android:layout_height="34dp"
+        android:text="stop"
+        android:textSize="25dp"
+        android:textDirection="rtl"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="103dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_below="@+id/itemName_TV"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="33dp"
+        android:layout_height="36dp"
+        android:text="원"
+        android:textDirection="rtl"
+        android:textSize = "25dp"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="103dp"
+        android:layout_alignTop="@+id/itemRecentPrice_TV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="33dp"
+            android:layout_height="36dp"
+            android:text="원"
+            android:textDirection="rtl"
+            android:textSize = "25dp"
+            tools:layout_editor_absoluteX="335dp"
+            tools:layout_editor_absoluteY="103dp"
+            android:layout_alignTop="@+id/itemStopPrice_TV"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

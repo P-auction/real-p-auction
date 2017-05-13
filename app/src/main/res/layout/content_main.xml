@@ -8,4 +8,20 @@
     tools:context="com.example.csc.helloworld2.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="404dp"
+        android:layout_height="542dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:choiceMode="singleChoice"
+        android:divider="#ff4c22"
+        android:dividerHeight="1.5dp"
+        android:scrollbarSize="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        tools:layout_editor_absoluteX="-1dp" />
+
+
 </android.support.constraint.ConstraintLayout>

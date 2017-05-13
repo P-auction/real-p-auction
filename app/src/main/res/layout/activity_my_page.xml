@@ -61,17 +61,17 @@
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="이름" />
+                android:text="메일" />
 
             <EditText
-                android:id="@+id/name_mypage_ET"
+                android:id="@+id/mail_mypage_ET"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:textSize="30dp"
                 android:maxLines="1"
-                android:text="" />
+                android:text=""
+                android:textSize="30dp" />
 
             <TextView
                 android:id="@+id/department_mypage_TV"

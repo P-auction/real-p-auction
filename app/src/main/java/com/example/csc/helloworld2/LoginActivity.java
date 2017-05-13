@@ -3,7 +3,10 @@ package com.example.csc.helloworld2;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -20,6 +23,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,7 +33,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,16 +50,26 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+    String code;
+    String id_text;
+    String password_text;
+    String mail_text;
+    String department_text;
+    String phone_text;
+    String body_size;
+    String image_size;
+    String common_send;
+    String body;
+    String final_send;
 
-    /**
-     * Id to identity READ_CONTACTS permission request.
-     */
+    String respond;
+    int resType;
+    int resBodySize;
+    int resImageSize;
+    String resBody;
+
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
@@ -62,17 +83,26 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private MyWebRequestReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_SEND);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        receiver = new MyWebRequestReceiver();
+        registerReceiver(receiver, filter);
+
+
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
+        //populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        /*mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == R.id.login || id == EditorInfo.IME_NULL) {
@@ -81,13 +111,39 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
                 return false;
             }
-        });
+        });*/
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button); //sign in button click
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                //attemptLogin();
+                code = "2";
+                id_text = mEmailView.getText().toString();
+                password_text = mPasswordView.getText().toString();
+                body = id_text+"\n"+password_text+"\n\0";
+                body_size =String.valueOf(body.length()+1);
+                image_size ="0";
+                common_send = code+"\n"+body_size+"\n"+image_size+"\n" +id_text+"\n";
+                common_send = CommonSendComplete(common_send);
+                final_send = common_send+body;
+                Log.e("파이널",final_send);
+                //final_send 송신 *****
+                Intent it = new Intent(LoginActivity.this, HelloIntentService.class);
+                it. putExtra("request", final_send);
+                startService(it);
+
+                //response 수신******
+                //CommonReceive(str);
+                /*if(resType!=0) {//만약에 성공하면
+                    Intent it = new Intent(LoginActivity.this, MainActivity.class);
+                    it.putExtra("id", id_text);
+                    startActivity(it);
+                    finish();
+                }else{//실패 -에러 메시지 출력
+                    Toast toast = Toast.makeText(LoginActivity.this,resBody,Toast.LENGTH_SHORT);
+                    toast.show();
+                }*/
             }
         });
 
@@ -104,6 +160,47 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         });
     }
 
+    public String CommonSendComplete(String common_send){
+        while(common_send.length()<256){
+            common_send = common_send+"\0";
+        }
+        return common_send;
+    }
+
+    public void CommonReceive(String common_receive){
+        Log.e("왔다 허지성",common_receive);
+        resType = Integer.valueOf(common_receive.split("\n")[0]);
+        resBodySize = Integer.valueOf(common_receive.split("\n")[1]);
+        resImageSize = Integer.valueOf(common_receive.split("\n")[2]);
+        if(resBodySize!=0) {//login성공 - body 없음
+            resBody = common_receive.split("\n")[3];
+        }
+    }
+    @Override
+    public void onDestroy(){
+        this.unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+
+    public class MyWebRequestReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            respond = intent.getStringExtra("response");
+            //Log.e("왔다! 장보리",respond);
+            //Toast toast1 = Toast.makeText(LoginActivity.this,"뭐를 받기는 해쏘",Toast.LENGTH_SHORT);
+            //toast1.show();
+            CommonReceive(respond);
+            if(resType>0) {//만약에 성공하면
+                Intent it = new Intent(LoginActivity.this, MainActivity.class);
+                it.putExtra("id", id_text);
+                startActivity(it);
+                finish();
+            }else{//실패 -에러 메시지 출력
+                Toast toast = Toast.makeText(LoginActivity.this,resBody,Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        }
+    }
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {

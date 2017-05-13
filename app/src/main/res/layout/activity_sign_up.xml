@@ -39,10 +39,10 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="이름을 입력하세요" />
+        android:text="메일을 입력하세요" />
 
     <EditText
-        android:id="@+id/name_ET"
+        android:id="@+id/sign_up_mail_ET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
