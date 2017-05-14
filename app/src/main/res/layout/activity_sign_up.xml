@@ -87,5 +87,7 @@
         android:layout_marginTop="42dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize = "30dp"
+        android:background="#FE2E64"
         android:text="등록" />
 </LinearLayout>

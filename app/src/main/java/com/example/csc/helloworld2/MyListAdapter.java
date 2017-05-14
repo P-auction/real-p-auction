@@ -17,7 +17,7 @@ public class MyListAdapter extends BaseAdapter{
     TextView recentPrice_TV;
     TextView stopPrice_TV;
 
-    public MyListAdapter(Context context, ArrayList<List_item> listViewItemList) {
+    public MyListAdapter(Context context, ArrayList<List_item> listViewItemList) {//생성자
         this.context = context;
         this.listViewItemList = listViewItemList;
     }
@@ -25,20 +25,19 @@ public class MyListAdapter extends BaseAdapter{
     @Override
     public int getCount() {
         return this.listViewItemList.size();
-    }
+    }//개수 얻어오기
 
     @Override
-    public Object getItem(int position) {
+    public Object getItem(int position) {//position으로 아이템 얻어오기
         return this.listViewItemList.get(position);
     }
-
     @Override
-    public long getItemId(int position) {
+    public long getItemId(int position) {//position으로 item id 얻어오기
         return position;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {//item의 변수들을 실제로 창에 뿌려주는 함수
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.activity_item, null);
             name_TV = (TextView) convertView.findViewById(R.id.itemName_TV);

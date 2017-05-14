@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,15 +13,24 @@
         android:layout_height="30dp"
         android:text=""
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:layout_editor_absoluteY="29dp"
+        android:layout_alignBaseline="@+id/betting_button"
+        android:layout_alignBottom="@+id/betting_button"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
 
     <Button
         android:id="@+id/betting_button"
         android:layout_width="70dp"
         android:layout_height="43dp"
+        android:background="#f08f00"
         android:text="베팅"
+        tools:layout_editor_absoluteX="235dp"
         tools:layout_editor_absoluteY="16dp"
-        tools:layout_editor_absoluteX="235dp" />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/showAuction_name_TV"
+        android:layout_toEndOf="@+id/showAuction_name_TV"
+        android:layout_marginTop="12dp" />
 
     <RatingBar
         android:id="@+id/ratingBar"
@@ -29,7 +38,10 @@
         android:numStars="1"
         android:layout_height="42dp"
         tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_above="@+id/showAuction_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:id="@+id/showAuction_image"
@@ -37,7 +49,12 @@
         android:layout_height="116dp"
         app:srcCompat="@drawable/ic_menu_camera"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteY="93dp"
+        android:layout_below="@+id/showAuction_name_TV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -47,7 +64,11 @@
         android:textSize = "17dp"
         android:text="최신 경매가"
         tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteY="93dp"
+        android:layout_below="@+id/showAuction_sellerInfo"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="14dp" />
 
     <TextView
         android:id="@+id/showAuction_newestPrice_TV"
@@ -55,7 +76,10 @@
         android:layout_height="26dp"
         android:text=""
         tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteY="93dp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignRight="@+id/textView15"
+        android:layout_alignEnd="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView5"
@@ -65,7 +89,11 @@
         android:textSize = "17dp"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="134dp" />
+        tools:layout_editor_absoluteY="134dp"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/showAuction_name_TV"
+        android:layout_alignStart="@+id/showAuction_name_TV" />
 
     <TextView
         android:id="@+id/showAuction_stopDate_TV"
@@ -73,7 +101,11 @@
         android:layout_height="25dp"
         android:text=""
         tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="176dp"
+        android:layout_alignBaseline="@+id/textView8"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignLeft="@+id/showAuction_stopPrice_TV"
+        android:layout_alignStart="@+id/showAuction_stopPrice_TV" />
 
     <TextView
         android:id="@+id/textView8"
@@ -83,7 +115,11 @@
         android:textSize = "17dp"
         android:textAlignment="center"
         tools:layout_editor_absoluteY="176dp"
-        tools:layout_editor_absoluteX="154dp" />
+        tools:layout_editor_absoluteX="154dp"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
 
     <TextView
         android:id="@+id/showAuction_stopPrice_TV"
@@ -91,7 +127,10 @@
         android:layout_height="28dp"
         android:text=""
         tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="134dp" />
+        tools:layout_editor_absoluteY="134dp"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignLeft="@+id/showAuction_newestPrice_TV"
+        android:layout_alignStart="@+id/showAuction_newestPrice_TV" />
 
     <TextView
         android:id="@+id/textView10"
@@ -101,7 +140,10 @@
         android:textAlignment="center"
         tools:layout_editor_absoluteX="16dp"
         android:textSize = "25dp"
-        tools:layout_editor_absoluteY="238dp" />
+        tools:layout_editor_absoluteY="238dp"
+        android:layout_below="@+id/showAuction_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/showAuction_description_VT"
@@ -109,7 +151,10 @@
         android:layout_height="87dp"
         android:text=""
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="269dp" />
+        tools:layout_editor_absoluteY="269dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/showAuction_sellerInfo"
@@ -117,7 +162,11 @@
         android:layout_height="89dp"
         android:text=""
         tools:layout_editor_absoluteX="211dp"
-        tools:layout_editor_absoluteY="269dp" />
+        tools:layout_editor_absoluteY="269dp"
+        android:layout_alignBaseline="@+id/showAuction_description_VT"
+        android:layout_alignBottom="@+id/showAuction_description_VT"
+        android:layout_toRightOf="@+id/showAuction_description_VT"
+        android:layout_toEndOf="@+id/showAuction_description_VT" />
 
     <TextView
         android:id="@+id/textView15"
@@ -127,7 +176,10 @@
         android:textAlignment="center"
         android:textSize = "20dp"
         tools:layout_editor_absoluteY="235dp"
-        tools:layout_editor_absoluteX="211dp" />
+        tools:layout_editor_absoluteX="211dp"
+        android:layout_above="@+id/showAuction_sellerInfo"
+        android:layout_toRightOf="@+id/showAuction_description_VT"
+        android:layout_toEndOf="@+id/showAuction_description_VT" />
 
     <TextView
         android:id="@+id/textView16"
@@ -137,14 +189,10 @@
         android:textSize = "22dp"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="371dp" />
+        tools:layout_editor_absoluteY="371dp"
+        android:layout_below="@+id/showAuction_name_TV"
+        android:layout_alignRight="@+id/textView15"
+        android:layout_alignEnd="@+id/textView15"
+        android:layout_marginTop="30dp" />
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="350dp"
-        android:layout_height="104dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="396dp">
-
-    </android.support.constraint.ConstraintLayout>
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

@@ -4,15 +4,9 @@ package com.example.csc.helloworld2;
  * Created by jisoo on 2017-05-12.
  */
 
-import android.app.Activity;
-import android.app.Application;
 import android.app.IntentService;
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.util.Log;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -28,14 +22,13 @@ public class HelloIntentService extends IntentService {
     public HelloIntentService() {
         super("HelloIntentService");
     }
-
     @Override
     protected void onHandleIntent(Intent intent) {
         int a = -1;
         if(clientSocket == null)
             clientSocket = new Socket();
         if(!clientSocket.isConnected()) {
-            HostIP = "141.223.203.6";
+            HostIP = "121.180.236.95";
             tcp_port = 17776;
             try {
                 clientSocket.connect(new InetSocketAddress(HostIP, tcp_port));
